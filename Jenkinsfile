@@ -12,23 +12,10 @@ pipeline {
     }
 }
           stage('Node') {
-              agent {label 'label1'}
-            steps {
+             steps {
                 echo "this is build stage"
-                sh '''
-                du -sh
-                '''
+                
             }
           }
-        
-        stage('Process') {
-            steps {
-                echo "this is process stage"
-                sh '''
-                ps -ef
-                '''
-            }
-        }
     }
 }
-        
