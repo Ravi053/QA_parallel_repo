@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent any;
     stages {
         stage('Build') {
             steps {
@@ -10,6 +10,7 @@ pipeline {
             }
         }
         stage('Print') {
+            agent any;
             steps {
                 echo "this is build stage"
                 sh '''
