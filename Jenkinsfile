@@ -4,11 +4,17 @@ pipeline {
         stage('Build') {
             steps {
                 echo "this is build stage"
+                sh '''
+                sleep 3
+                '''
             }
         }
         stage('Print') {
             steps {
                 echo "this is build stage"
+                sh '''
+                sleep 3
+                '''
     }
 }
           stage('$job_name') {
