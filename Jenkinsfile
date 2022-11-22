@@ -19,8 +19,7 @@ pipeline {
     }
 }
           stage('job_name') {
-              agent{label 'label1'}
-             steps {
+              steps {
                 echo "this is build stage"
                  
                 
