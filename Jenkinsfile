@@ -11,7 +11,8 @@ pipeline {
                 echo "this is build stage"
     }
 }
-          stage('Node') {
+          stage('$job_name') {
+              agent{label 'label1'}
              steps {
                 echo "this is build stage"
                 
