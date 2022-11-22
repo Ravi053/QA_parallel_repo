@@ -22,9 +22,7 @@ pipeline {
               agent{label 'label1'}
              steps {
                 echo "this is build stage"
-                 sh '''
-                 df -h
-                 '''
+                 
                 
             }
           }
