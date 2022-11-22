@@ -1,13 +1,10 @@
-pipeline {
+pipeline{
     agent any
-    stages {
+    stages{
         
-        stage('build') {
-            step {
+        stage('build'){
+            step{
                 echo "this is build stage"
-                sh '''
-                sleep 3
-                '''
             }
         }
     }
