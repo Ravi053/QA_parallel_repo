@@ -12,7 +12,7 @@ pipeline {
     }
 }
           stage('Node') {
-              agent {agent 'label1'}
+              agent {label 'label1'}
             steps {
                 echo "this is build stage"
                 sh '''
