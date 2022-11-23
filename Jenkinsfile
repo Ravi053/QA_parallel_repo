@@ -15,7 +15,7 @@ pipeline {
                     steps {
                         echo "this is test stage"
                         sh '''
-                        sleep 3
+                        df -h
                         '''
                     }
                 }
