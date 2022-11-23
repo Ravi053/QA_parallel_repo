@@ -9,20 +9,5 @@ pipeline {
                 '''
             }
         }
-        stage('Test') {
-            steps {
-                echo "this is build stage"
-                sh '''
-                sleep 3
-                '''
-    }
-}
-          stage('Deploy') {
-              steps {
-                echo "this is build stage"
-                 
-                
-            }
-          }
     }
 }
