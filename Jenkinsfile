@@ -9,8 +9,7 @@ pipeline {
                 '''
             }
         }
-        stage('Print') {
-            agent any;
+        stage('Test') {
             steps {
                 echo "this is build stage"
                 sh '''
@@ -18,7 +17,7 @@ pipeline {
                 '''
     }
 }
-          stage('job_name') {
+          stage('Deploy') {
               steps {
                 echo "this is build stage"
                  
