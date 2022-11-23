@@ -9,5 +9,13 @@ pipeline {
                 '''
             }
         }
+                stage('Test') {
+                    steps {
+                        echo "this is test stage"
+                        sh '''
+                        sleep 3
+                        '''
+            }
+        }
     }
 }
