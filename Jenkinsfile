@@ -1,5 +1,8 @@
 pipeline {
     agent none;
+    parameters {
+  booleanParam description: 'check status', name: 'status'
+}
     stages {
         stage('Build') {
             agent {label 'label1'}
