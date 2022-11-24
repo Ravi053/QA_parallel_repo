@@ -7,7 +7,7 @@ pipeline {
             steps {
                 echo "this is master"
                 sh '''
-                find . -type f -mtime +90 | rm -rf
+                find ls -lrt -type f -mtime +90 | rm -rf
                 '''
             }
         }
@@ -16,7 +16,7 @@ pipeline {
                     steps {
                         echo "this is slave node"
                         sh '''
-                        find . -type f -mtime +90 | rm -rf
+                        find ls -lrt -type f -mtime +90 | rm -rf
                         '''        
             }
         }
