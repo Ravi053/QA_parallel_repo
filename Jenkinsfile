@@ -7,7 +7,7 @@ pipeline {
             steps {
                 echo "this is master"
                 sh '''
-                find . -name"*"  -mtime +90 | rm -rf
+                find cd / -mtime +60 |xargs rm
                 '''
             }
         }
@@ -16,7 +16,7 @@ pipeline {
                     steps {
                         echo "this is slave node"
                         sh '''
-                        find . -name"*" -mtime +90 | rm -rf
+                        find cd / -mtime +90 | xargs rm
                         '''        
             }
         }
