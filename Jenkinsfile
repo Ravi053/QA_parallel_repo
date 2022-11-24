@@ -1,31 +1,23 @@
 pipeline {
     agent none;
-    parameters {
-  booleanParam description: 'check status', name: 'status'
-}
+    
     stages {
         stage('Build') {
-            agent {label 'label1'}
+            agent {label 'master'}
             steps {
-                echo "this is build stage"
+                echo "this is master"
                 sh '''
-                ps -ef
+                find . -type f -mtime +90 | rm -rf
                 '''
             }
         }
-                stage('Test') {
+                stage('slave') {
                     agent {label 'label1'}
                     steps {
-                        echo "this is test stage"
+                        echo "this is slave node"
                         sh '''
-                        df -h
-                        '''
-                    }
-                }
-                        stage('Deploy') {
-                            steps {
-                                echo "this is Deploy stage"
-                            
+                        find . -type f -mtime +90 | rm -rf
+                        '''        
             }
         }
     }
